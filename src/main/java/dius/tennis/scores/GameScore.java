@@ -1,4 +1,4 @@
-package scores;
+package dius.tennis.scores;
 
 public class GameScore {
     private Integer player1Score = 0;

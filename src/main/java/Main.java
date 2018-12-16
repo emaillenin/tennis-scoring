@@ -1,4 +1,4 @@
-import match.Match;
+import dius.tennis.match.Match;
 
 public class Main {
 

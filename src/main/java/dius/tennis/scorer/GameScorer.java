@@ -1,6 +1,6 @@
-package scorer;
+package dius.tennis.scorer;
 
-import scores.GameScore;
+import dius.tennis.scores.GameScore;
 
 public class GameScorer {
     public static final Integer DEUCE_POINTS = 40;

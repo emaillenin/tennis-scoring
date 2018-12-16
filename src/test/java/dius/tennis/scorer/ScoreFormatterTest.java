@@ -1,7 +1,7 @@
-package scorer;
+package dius.tennis.scorer;
 
 import org.junit.Test;
-import scores.GameScore;
+import dius.tennis.scores.GameScore;
 
 import static org.junit.Assert.*;
 

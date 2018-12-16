@@ -1,9 +1,9 @@
-package scorer;
+package dius.tennis.scorer;
 
-import scores.GameScore;
+import dius.tennis.scores.GameScore;
 
-import static scorer.GameScorer.DEUCE_POINTS;
-import static scorer.GameScorer.WINNING_POINTS;
+import static dius.tennis.scorer.GameScorer.DEUCE_POINTS;
+import static dius.tennis.scorer.GameScorer.WINNING_POINTS;
 
 public class ScoreFormatter {
     private GameScore score;

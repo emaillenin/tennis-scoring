@@ -1,8 +1,8 @@
-package match;
+package dius.tennis.match;
 
-import scorer.GameScorer;
-import scorer.ScoreFormatter;
-import scores.GameScore;
+import dius.tennis.scorer.GameScorer;
+import dius.tennis.scorer.ScoreFormatter;
+import dius.tennis.scores.GameScore;
 
 public class Match {
     private final String player1;

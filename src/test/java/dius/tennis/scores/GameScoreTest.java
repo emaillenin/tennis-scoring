@@ -1,4 +1,4 @@
-package scores;
+package dius.tennis.scores;
 
 import org.junit.Test;
 
