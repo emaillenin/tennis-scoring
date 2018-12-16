@@ -3,7 +3,7 @@ import match.Match;
 public class Main {
 
     public static void main(String[] args) {
-        Match match = new Match("player 1", "player 2");
+        var match = new Match("player 1", "player 2");
         match.pointWonBy("player 1");
         match.pointWonBy("player 2");
         // this will return "0-0, 15-15"
