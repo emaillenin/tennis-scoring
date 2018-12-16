@@ -1,6 +1,8 @@
 Tennis Scoring System
 =
 
+[![Build Status](https://travis-ci.org/emaillenin/tennis-scoring.svg?branch=master)](https://travis-ci.org/emaillenin/tennis-scoring)
+
 #### Requirements:
 
  - This solution is built with Java 11 (OpenJDK).
@@ -19,6 +21,10 @@ Due to time constraints, these were not implemented yet:
 - The program assumes the client passes in correct data. Eg. Null values for the input are not handled and might break the application.
 - The program works correctly only for the first set. As soon as the first set is complete, further scores will be incorrect. 
 
-To run tests:
+#### To run tests:
 
 > mvn test
+
+#### Travis is setup at:
+
+https://travis-ci.org/emaillenin/tennis-scoring
