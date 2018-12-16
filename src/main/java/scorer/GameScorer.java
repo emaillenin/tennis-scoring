@@ -6,11 +6,22 @@ public class GameScorer {
     private final Integer DEUCE_POINTS = 40;
 
     public void updateScore(GameScore score, Boolean pointByFirstPlayer) {
-        if (score.getPlayer1Score().equals(DEUCE_POINTS) && score.getPlayer2Score().equals(DEUCE_POINTS)) {
+        if (score.isPlayer1Advantage() || score.isPlayer2Advantage()) {
+            updateAdvantagePoints(score, pointByFirstPlayer);
+        } else if (score.getPlayer1Score().equals(DEUCE_POINTS) && score.getPlayer2Score().equals(DEUCE_POINTS)) {
             updateDeucePoints(score, pointByFirstPlayer);
         } else {
             updateRegularPoints(score, pointByFirstPlayer);
         }
+    }
+
+    private void updateAdvantagePoints(GameScore score, Boolean pointByFirstPlayer) {
+        if(pointByFirstPlayer && score.isPlayer1Advantage()) {
+            score.scoreForPlayer1();
+        } else if (!pointByFirstPlayer && score.isPlayer2Advantage()) {
+            score.scoreForPlayer2();
+        }
+        score.resetAdvantage();
     }
 
     private void updateDeucePoints(GameScore score, Boolean pointByFirstPlayer) {

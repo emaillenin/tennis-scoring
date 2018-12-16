@@ -22,6 +22,11 @@ public class GameScore {
         player2Advantage = true;
     }
 
+    public void resetAdvantage() {
+        player1Advantage = false;
+        player2Advantage = false;
+    }
+
     public Integer getPlayer1Score() {
         return player1Score;
     }

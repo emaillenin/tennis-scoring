@@ -78,4 +78,24 @@ public class GameScorerTest {
         assertFalse(gameScore.isPlayer1Advantage());
         assertFalse(gameScore.isPlayer2Advantage());
     }
+
+    @Test
+    public void handleAdvantageWin() {
+        GameScore gameScore = new GameScore();
+        GameScorer gameScorer = new GameScorer();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer2();
+        gameScore.scoreForPlayer2();
+        gameScore.scoreForPlayer2();
+
+        gameScorer.updateScore(gameScore, true);
+        gameScorer.updateScore(gameScore, true);
+
+        assertEquals((Integer) 50, gameScore.getPlayer1Score());
+        assertEquals((Integer) 40, gameScore.getPlayer2Score());
+        assertFalse(gameScore.isPlayer1Advantage());
+        assertFalse(gameScore.isPlayer2Advantage());
+    }
 }
