@@ -4,6 +4,7 @@ import org.junit.Test;
 import scores.GameScore;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class GameScorerTest {
 
@@ -39,5 +40,23 @@ public class GameScorerTest {
 
         assertEquals((Integer) 30, gameScore.getPlayer1Score());
         assertEquals((Integer) 0, gameScore.getPlayer2Score());
+    }
+
+    @Test
+    public void handleAdvantagePoints() {
+        GameScore gameScore = new GameScore();
+        GameScorer gameScorer = new GameScorer();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer2();
+        gameScore.scoreForPlayer2();
+        gameScore.scoreForPlayer2();
+
+        gameScorer.updateScore(gameScore, true);
+
+        assertEquals((Integer) 40, gameScore.getPlayer1Score());
+        assertEquals((Integer) 40, gameScore.getPlayer2Score());
+        assertTrue(gameScore.isPlayer1Advantage());
     }
 }
