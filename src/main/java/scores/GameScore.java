@@ -1,7 +1,7 @@
 package scores;
 
 public class GameScore {
-    private Integer player1Score = 0; //try to use enum
+    private Integer player1Score = 0;
     private Integer player2Score = 0;
 
     public void scoreForPlayer1() {
