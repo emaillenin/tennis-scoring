@@ -43,7 +43,7 @@ public class GameScorerTest {
     }
 
     @Test
-    public void handleAdvantagePoints() {
+    public void handleDeucePoints() {
         GameScore gameScore = new GameScore();
         GameScorer gameScorer = new GameScorer();
         gameScore.scoreForPlayer1();
