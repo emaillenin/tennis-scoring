@@ -7,14 +7,14 @@ import static org.junit.Assert.*;
 public class GameScoreTest {
 
     @Test
-    public void addPoints() {
+    public void testAddPoints() {
         GameScore gameScore = new GameScore();
         gameScore.scoreForPlayer1();
         assertEquals((Integer) 15, gameScore.getPlayer1Score());
     }
 
     @Test
-    public void addDoublePoints() {
+    public void testDoublePoints() {
         GameScore gameScore = new GameScore();
         gameScore.scoreForPlayer2();
         gameScore.scoreForPlayer2();

@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class GameScorerTest {
 
     @Test
-    public void updatePointsForPlayer1() {
+    public void testPointsForPlayer1() {
         GameScore gameScore = new GameScore();
         GameScorer gameScorer = new GameScorer();
 
@@ -19,7 +19,7 @@ public class GameScorerTest {
     }
 
     @Test
-    public void updatePointsForPlayer2() {
+    public void testPointsForPlayer2() {
         GameScore gameScore = new GameScore();
         GameScorer gameScorer = new GameScorer();
 
@@ -30,7 +30,7 @@ public class GameScorerTest {
     }
 
     @Test
-    public void addNewPointsForExistingGameScore() {
+    public void testNewPointsForExistingGameScore() {
         GameScore gameScore = new GameScore();
         GameScorer gameScorer = new GameScorer();
         gameScore.scoreForPlayer1();
@@ -42,7 +42,7 @@ public class GameScorerTest {
     }
 
     @Test
-    public void handleDeucePoints() {
+    public void testDeucePoints() {
         GameScore gameScore = new GameScore();
         GameScorer gameScorer = new GameScorer();
         gameScore.scoreForPlayer1();
@@ -60,7 +60,7 @@ public class GameScorerTest {
     }
 
     @Test
-    public void handleAdvantage() {
+    public void testAdvantagePlayer() {
         GameScore gameScore = new GameScore();
         GameScorer gameScorer = new GameScorer();
         gameScore.scoreForPlayer1();
@@ -80,7 +80,7 @@ public class GameScorerTest {
     }
 
     @Test
-    public void handleAdvantageWin() {
+    public void testAdvantageWin() {
         GameScore gameScore = new GameScore();
         GameScorer gameScorer = new GameScorer();
         gameScore.scoreForPlayer1();
