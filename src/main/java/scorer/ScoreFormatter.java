@@ -7,9 +7,13 @@ import static scorer.GameScorer.WINNING_POINTS;
 
 public class ScoreFormatter {
     private GameScore score;
+    private final String player1;
+    private final String player2;
 
-    public ScoreFormatter(GameScore score) {
+    public ScoreFormatter(GameScore score, String player1, String player2) {
         this.score = score;
+        this.player1 = player1;
+        this.player2 = player2;
     }
 
     public String formatScore() {
@@ -18,9 +22,9 @@ public class ScoreFormatter {
         } else if (score.getPlayer2Score().equals(WINNING_POINTS)) {
             return "0-1";
         } else if (score.isPlayer1Advantage()) {
-            return "0-0, Advantage player 1";
+            return String.format("0-0, Advantage %s", player1);
         } else if (score.isPlayer2Advantage()) {
-            return "0-0, Advantage player 2";
+            return String.format("0-0, Advantage %s", player2);
         } else if (score.getPlayer1Score().equals(DEUCE_POINTS) && score.getPlayer2Score().equals(DEUCE_POINTS)) {
             return "0-0, Deuce";
         }
