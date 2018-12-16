@@ -3,7 +3,8 @@ package scorer;
 import scores.GameScore;
 
 public class GameScorer {
-    private final Integer DEUCE_POINTS = 40;
+    public static final Integer DEUCE_POINTS = 40;
+    public static final Integer WINNING_POINTS = 50;
 
     public void updateScore(GameScore score, Boolean pointByFirstPlayer) {
         if (score.isPlayer1Advantage() || score.isPlayer2Advantage()) {
