@@ -3,8 +3,7 @@ package scorer;
 import org.junit.Test;
 import scores.GameScore;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class GameScorerTest {
 
@@ -58,5 +57,25 @@ public class GameScorerTest {
         assertEquals((Integer) 40, gameScore.getPlayer1Score());
         assertEquals((Integer) 40, gameScore.getPlayer2Score());
         assertTrue(gameScore.isPlayer1Advantage());
+    }
+
+    @Test
+    public void handleAdvantage() {
+        GameScore gameScore = new GameScore();
+        GameScorer gameScorer = new GameScorer();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer1();
+        gameScore.scoreForPlayer2();
+        gameScore.scoreForPlayer2();
+        gameScore.scoreForPlayer2();
+
+        gameScorer.updateScore(gameScore, true);
+        gameScorer.updateScore(gameScore, false);
+
+        assertEquals((Integer) 40, gameScore.getPlayer1Score());
+        assertEquals((Integer) 40, gameScore.getPlayer2Score());
+        assertFalse(gameScore.isPlayer1Advantage());
+        assertFalse(gameScore.isPlayer2Advantage());
     }
 }
