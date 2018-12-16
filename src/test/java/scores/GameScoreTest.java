@@ -9,7 +9,7 @@ public class GameScoreTest {
     @Test
     public void addPoints() {
         GameScore gameScore = new GameScore();
-        gameScore.addPoints("player 1");
+        gameScore.scoreForPlayer1();
         assertEquals((Integer) 15, gameScore.getPlayer1Score());
     }
 }
